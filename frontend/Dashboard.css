@@ -1,0 +1,462 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 60px); /* Adjust based on navbar height */
+  background-color: #f8f9fa;
+}
+
+.dashboard-header {
+  background-color: #ffffff;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #e9ecef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  color: #343a40;
+  font-size: 1.8rem;
+}
+
+.logout-btn {
+  background-color: #dc3545;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #c82333;
+}
+
+.dashboard-content {
+  display: flex;
+  flex-grow: 1;
+}
+
+.dashboard-sidebar {
+  width: 250px;
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-info {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+.user-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 auto 1rem;
+  border: 3px solid #ffffff;
+}
+
+.user-info h3 {
+  margin: 0.5rem 0 0.2rem;
+  color: #ffffff;
+  font-size: 1.3rem;
+}
+
+.user-info p {
+  margin: 0;
+  color: #adb5bd;
+  font-size: 0.9rem;
+}
+
+.user-role {
+  display: inline-block;
+  background-color: #28a745;
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  text-transform: capitalize;
+}
+
+.dashboard-nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-nav .nav-item {
+  background: none;
+  border: none;
+  color: #adb5bd;
+  padding: 1rem 2rem;
+  text-align: left;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: 100%;
+}
+
+.dashboard-nav .nav-item:hover {
+  background-color: #495057;
+  color: #ffffff;
+}
+
+.dashboard-nav .nav-item.active {
+  background-color: #007bff;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.dashboard-main {
+  flex-grow: 1;
+  padding: 2rem;
+  background-color: #f8f9fa;
+}
+
+.profile-section, .orders-section, .reservations-section, .settings-section {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.profile-section h2, .orders-section h2, .reservations-section h2, .settings-section h2 {
+  color: #343a40;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.75rem;
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 1rem;
+}
+
+.profile-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.profile-field {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid #e9ecef;
+}
+
+.profile-field label {
+  display: block;
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-bottom: 0.3rem;
+}
+
+.profile-field p {
+  margin: 0;
+  font-size: 1rem;
+  color: #343a40;
+  font-weight: 500;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.edit-profile-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+}
+
+.edit-profile-btn:hover {
+  background-color: #0056b3;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: #f1f3f5;
+  border-radius: 8px;
+  color: #6c757d;
+}
+
+.empty-state p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.browse-btn, .book-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.browse-btn:hover, .book-btn:hover {
+  background-color: #218838;
+}
+
+.orders-list, .reservations-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.order-card, .reservation-card {
+  background-color: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+.order-header, .reservation-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.order-header h3, .reservation-header h3 {
+  margin: 0;
+  color: #343a40;
+  font-size: 1.25rem;
+}
+
+.status {
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.status.completed {
+  background-color: #d4edda;
+  color: #28a745;
+}
+
+.status.pending {
+  background-color: #fff3cd;
+  color: #ffc107;
+}
+
+.status.confirmed {
+  background-color: #d1ecf1;
+  color: #17a2b8;
+}
+
+.status.cancelled {
+  background-color: #f8d7da;
+  color: #dc3545;
+}
+
+.order-details p, .reservation-details p {
+  margin: 0.5rem 0;
+  color: #495057;
+}
+
+.order-actions, .reservation-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 0.8rem;
+}
+
+.view-details-btn, .reorder-btn, .cancel-btn {
+  background-color: #6c757d;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.view-details-btn:hover {
+  background-color: #5a6268;
+}
+
+.reorder-btn {
+  background-color: #007bff;
+}
+
+.reorder-btn:hover {
+  background-color: #0056b3;
+}
+
+.cancel-btn {
+  background-color: #dc3545;
+}
+
+.cancel-btn:hover {
+  background-color: #c82333;
+}
+
+.settings-card {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.setting-item {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.setting-item h3 {
+  margin: 0;
+  color: #343a40;
+  font-size: 1.1rem;
+}
+
+.setting-item p {
+  margin: 0.2rem 0 0;
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.setting-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.setting-btn:hover {
+  background-color: #0056b3;
+}
+
+.setting-item.danger .setting-btn {
+  background-color: #dc3545;
+}
+
+.setting-item.danger .setting-btn:hover {
+  background-color: #c82333;
+}
+
+.dashboard-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 60px);
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+
+.loading-spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #007bff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.dashboard-error {
+  text-align: center;
+  padding: 5rem 2rem;
+  color: #dc3545;
+}
+
+.dashboard-error h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.dashboard-error p {
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .dashboard-content {
+    flex-direction: column;
+  }
+
+  .dashboard-sidebar {
+    width: 100%;
+    padding: 1rem 0;
+    flex-direction: row;
+    justify-content: space-around;
+    border-bottom: 1px solid #e9ecef;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  }
+
+  .user-info {
+    display: none; /* Hide user info on small screens */
+  }
+
+  .dashboard-nav {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .dashboard-nav .nav-item {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  .dashboard-main {
+    padding: 1.5rem;
+  }
+
+  .profile-card {
+    grid-template-columns: 1fr;
+  }
+
+  .setting-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .setting-item .setting-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
