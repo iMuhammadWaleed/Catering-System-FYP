@@ -1,8 +1,8 @@
 # Catering-System-FYP
 
-For more documentation, check the [README in the docs folder](docs/README.md).
+# 🚧 Under Development 🚧
 
-
+This website is currently under development. Some features may not be fully implemented or may not work as expected. 
 
 ## Local Setup Guide
 
