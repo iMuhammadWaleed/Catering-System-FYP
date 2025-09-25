@@ -1,0 +1,204 @@
+/* CatererDetail.css */
+.caterer-detail-page {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    min-height: calc(100vh - 60px); /* Adjust based on navbar height */
+}
+
+.caterer-detail-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    padding: 40px;
+}
+
+.caterer-header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.caterer-header h1 {
+    font-size: 2.8em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.caterer-rating {
+    font-size: 1.2em;
+    color: #f39c12;
+}
+
+.caterer-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.info-card {
+    background-color: #fdfdfd;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.info-card h3 {
+    font-size: 1.4em;
+    color: #555;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+.info-card p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.info-card p strong {
+    color: #333;
+}
+
+.caterer-description {
+    margin-bottom: 40px;
+}
+
+.caterer-description h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.caterer-description p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #555;
+}
+
+.caterer-menu {
+    margin-bottom: 40px;
+}
+
+.caterer-menu h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.menu-items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.menu-item-card {
+    background-color: #fdfdfd;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+.menu-item-card h3 {
+    font-size: 1.3em;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+.menu-item-card p {
+    font-size: 0.95em;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.menu-item-price {
+    font-weight: bold;
+    color: #e67e22;
+    font-size: 1.1em;
+}
+
+.caterer-occasions {
+    margin-bottom: 40px;
+}
+
+.caterer-occasions h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.occasion-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.occasion-tag {
+    background-color: #e9f7ef;
+    color: #27ae60;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.caterer-actions {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.book-now-btn, .contact-btn {
+    background-color: #e67e22;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 10px;
+}
+
+.book-now-btn:hover, .contact-btn:hover {
+    background-color: #d35400;
+}
+
+.caterer-detail-loading, .caterer-detail-error, .caterer-detail-not-found {
+    text-align: center;
+    padding: 50px;
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .caterer-detail-container {
+        padding: 20px;
+    }
+
+    .caterer-header h1 {
+        font-size: 2em;
+    }
+
+    .caterer-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-items-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .book-now-btn, .contact-btn {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+
